@@ -3,7 +3,7 @@ import foods from "../imgs/foods.jpg";
 
 const Hero = () => {
   return (
-    <div className=" max-w-[1640px] mx-auto p-4">
+    <div className=" max-w-[1640px] mx-auto py-12">
       <div className=" max-h-[500px] relative">
         {/* Overlay Here  */}
         <div className=" w-full h-full absolute text-gray-200 max-h-[500px] flex flex-col justify-center bg-black/40">

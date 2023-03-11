@@ -14,7 +14,7 @@ const Navbar = () => {
   const [menu, setMenu] = useState(false);
 
   return (
-    <div className=" max-w-[1640px] mx-auto flex justify-between items-center p-4">
+    <div className=" max-w-[1640px] mx-auto flex justify-between items-center ">
       {/* Left Side  */}
       <div className=" flex items-center">
         <div onClick={() => setMenu(!menu)} className=" cursor-pointer">
