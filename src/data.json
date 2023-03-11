@@ -1,0 +1,20 @@
+[
+  {
+    id: 1,
+    p1: "Order your Khana",
+    p2: "Before stock out",
+    img: require("./imgs/card1.jpg"),
+  },
+  {
+    id: 2,
+    p1: "Order your Khana",
+    p2: "Before stock out",
+    img: require("./imgs/card2.jpg"),
+  },
+  {
+    id: 3,
+    p1: "Order your Khana",
+    p2: "Before stock out",
+    img: require("./imgs/card3.jpg"),
+  },
+];
