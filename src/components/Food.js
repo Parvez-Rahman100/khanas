@@ -22,7 +22,7 @@ const Food = () => {
   };
   return (
     <div className="max-w-[1640px] m-auto px-4">
-      <h1 className="text-orange-800 font-bold text-center text-4xl">
+      <h1 className="text-orange-400 font-bold text-center text-4xl">
         Top Khanas From Our Side.
       </h1>
       {/* Filter Row  */}
