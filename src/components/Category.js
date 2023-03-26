@@ -3,7 +3,7 @@ import { categories } from "../FoodApi/FoodApi";
 
 const Category = () => {
   return (
-    <div className="max-w-[1640px] pt-12 m-auto">
+    <div className="px-2 lg:px-12 max-w-[1640px] py-12 m-auto">
       <h1 className="text-orange-400 font-bold text-4xl text-center pb-12">
         Top Rated Category
       </h1>

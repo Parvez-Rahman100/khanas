@@ -5,7 +5,6 @@ import "./Food.css";
 const Food = () => {
   const [active, setActive] = useState("all");
   const [foods, setFoods] = useState(FoodApi);
-  console.log("active", active);
 
   // Filter Foods
   const filterType = (category) => {
@@ -30,7 +29,7 @@ const Food = () => {
     );
   };
   return (
-    <div className="max-w-[1640px] m-auto px-4">
+    <div className="px-2 lg:px-12 max-w-[1640px] m-auto">
       <h1 className="text-orange-400 font-bold text-center text-4xl">
         Top Khanas From Our Side.
       </h1>

@@ -24,7 +24,7 @@ const Cards = () => {
   ];
 
   return (
-    <div className=" max-w-[1640px] mx-auto pb-12 grid md:grid-cols-3 gap-6">
+    <div className="px-2 lg:px-12 max-w-[1640px] mx-auto pb-12 grid md:grid-cols-3 gap-6">
       {/* Cards here  */}
       {data?.map((data) => (
         <Card key={data?.id} data={data} />
