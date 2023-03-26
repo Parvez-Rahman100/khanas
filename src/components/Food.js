@@ -1,21 +1,30 @@
 import React, { useState } from "react";
 import { FoodApi } from "../FoodApi/FoodApi";
+import "./Food.css";
 
 const Food = () => {
+  const [active, setActive] = useState("all");
   const [foods, setFoods] = useState(FoodApi);
+  console.log("active", active);
+
   // Filter Foods
   const filterType = (category) => {
-    setFoods(
-      foods.filter((item) => {
-        return item.category === category;
-      })
-    );
+    setActive(category);
+    if (category === "all") {
+      setFoods(FoodApi);
+    } else {
+      setFoods(
+        FoodApi.filter((item) => {
+          return item.category === category;
+        })
+      );
+    }
   };
 
   // Filter By Price
   const filterPrice = (price) => {
     setFoods(
-      foods.filter((item) => {
+      FoodApi.filter((item) => {
         return item.price === price;
       })
     );
@@ -32,32 +41,52 @@ const Food = () => {
           <p className="font-bold text-gray-700">Khanas Type</p>
           <div className="flex justify-between flex-wrap">
             <button
-              onClick={() => setFoods(foods)}
-              className="button text-orange-400 border-orange-600 hover:bg-orange-400 hover:text-white m-1 border rounded-xl px-2 "
+              onClick={() => filterType("all")}
+              className={
+                active === "all"
+                  ? "button text-white border-orange-600 bg-orange-600 m-1 border rounded-xl px-2"
+                  : "button text-orange-400 border-orange-600 hover:bg-orange-400 hover:text-white m-1 border rounded-xl px-2 "
+              }
             >
               All
             </button>
             <button
               onClick={() => filterType("burger")}
-              className="button text-orange-400 border-orange-600 hover:bg-orange-400 hover:text-white m-1 border rounded-xl px-2 "
+              className={
+                active === "burger"
+                  ? "button text-white border-orange-600 bg-orange-600 m-1 border rounded-xl px-2"
+                  : "button text-orange-400 border-orange-600 hover:bg-orange-400 hover:text-white m-1 border rounded-xl px-2 "
+              }
             >
               Burger
             </button>
             <button
               onClick={() => filterType("pizza")}
-              className="button text-orange-400 border-orange-600 hover:bg-orange-400 hover:text-white m-1 border rounded-xl px-2 "
+              className={
+                active === "pizza"
+                  ? "button text-white border-orange-600 bg-orange-600 m-1 border rounded-xl px-2"
+                  : "button text-orange-400 border-orange-600 hover:bg-orange-400 hover:text-white m-1 border rounded-xl px-2 "
+              }
             >
               Pizza
             </button>
             <button
               onClick={() => filterType("salad")}
-              className="button text-orange-400 border-orange-600 hover:bg-orange-400 hover:text-white m-1 border rounded-xl px-2 "
+              className={
+                active === "salad"
+                  ? "button text-white border-orange-600 bg-orange-600 m-1 border rounded-xl px-2"
+                  : "button text-orange-400 border-orange-600 hover:bg-orange-400 hover:text-white m-1 border rounded-xl px-2 "
+              }
             >
               Salad
             </button>
             <button
               onClick={() => filterType("chicken")}
-              className="button text-orange-400 border-orange-600 hover:bg-orange-400 hover:text-white m-1 border rounded-xl px-2 "
+              className={
+                active === "chicken"
+                  ? "button text-white border-orange-600 bg-orange-600 m-1 border rounded-xl px-2"
+                  : "button text-orange-400 border-orange-600 hover:bg-orange-400 hover:text-white m-1 border rounded-xl px-2 "
+              }
             >
               Chickens
             </button>
